@@ -64,8 +64,7 @@ func CEFRenderProcessHandler_on_context_created(ptr: UnsafeMutablePointer<cef_re
     }
     
     obj.onContextCreated(browser: CEFBrowser.fromCEF(browser)!,
-                         frame: CEFFrame.fromCEF(frame)!,
-                         context: CEFV8Context.fromCEF(context)!)
+                         frame: CEFFrame.fromCEF(frame)!)
 }
 
 func CEFRenderProcessHandler_on_context_released(ptr: UnsafeMutablePointer<cef_render_process_handler_t>?,
@@ -77,8 +76,7 @@ func CEFRenderProcessHandler_on_context_released(ptr: UnsafeMutablePointer<cef_r
     }
     
     obj.onContextReleased(browser: CEFBrowser.fromCEF(browser)!,
-                          frame: CEFFrame.fromCEF(frame)!,
-                          context: CEFV8Context.fromCEF(context)!)
+                          frame: CEFFrame.fromCEF(frame)!)
 }
 
 func CEFRenderProcessHandler_on_uncaught_exception(ptr: UnsafeMutablePointer<cef_render_process_handler_t>?,
@@ -93,7 +91,6 @@ func CEFRenderProcessHandler_on_uncaught_exception(ptr: UnsafeMutablePointer<cef
     
     obj.onUncaughtException(browser: CEFBrowser.fromCEF(browser)!,
                             frame: CEFFrame.fromCEF(frame)!,
-                            context: CEFV8Context.fromCEF(context)!,
                             exception: CEFV8Exception.fromCEF(exception)!,
                             stackTrace: CEFV8StackTrace.fromCEF(trace)!)
 }
