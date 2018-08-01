@@ -107,14 +107,6 @@ public extension CEFRenderProcessHandler {
 
     var loadHandler: CEFLoadHandler? { return nil }
 
-    func onBeforeNavigation(browser: CEFBrowser,
-                            frame: CEFFrame,
-                            request: CEFRequest,
-                            navigationType: CEFNavigationType,
-                            isRedirect: Bool) -> CEFOnBeforeNavigationAction {
-        return .allow
-    }
-
     func onContextCreated(browser: CEFBrowser, frame: CEFFrame) {
     }
 
